@@ -1,0 +1,327 @@
+{
+  "contract_name": "AddRecord",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "records",
+      "outputs": [
+        {
+          "name": "db_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "table_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "db_key_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "db_key_value",
+          "type": "uint256"
+        },
+        {
+          "name": "db_op_type",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRec",
+      "outputs": [
+        {
+          "name": "_db_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_table_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_db_key_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_db_key_value",
+          "type": "uint256"
+        },
+        {
+          "name": "_db_op_type",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLastRec",
+      "outputs": [
+        {
+          "name": "_db_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_table_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_db_key_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_db_key_value",
+          "type": "uint256"
+        },
+        {
+          "name": "_db_op_type",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCount",
+      "outputs": [
+        {
+          "name": "Count",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newDb_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "newTable_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "newDb_key_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "newDb_key_value",
+          "type": "uint256"
+        },
+        {
+          "name": "newDb_op_type",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addRec",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "newDb_name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "newTable_name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "newDb_key_name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "newDb_key_value",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newDb_op_type",
+          "type": "bytes32"
+        }
+      ],
+      "name": "AddRec",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6105e48061001f6000396000f300606060405236156100755763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633446106781146100d45780635a2db0291461011b5780635c5d144a14610162578063a87d942c146101a6578063ca2684ce146101cb578063cbf0b0c0146101ef575b5b60003411156100d1577fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c333460405173ffffffffffffffffffffffffffffffffffffffff909216825260208201526040908101905180910390a15b5b005b34156100df57600080fd5b6100ea60043561021d565b60405194855260208501939093526040808501929092526060840152608083019190915260a0909101905180910390f35b341561012657600080fd5b6100ea60043561025e565b60405194855260208501939093526040808501929092526060840152608083019190915260a0909101905180910390f35b341561016d57600080fd5b6100ea61034f565b60405194855260208501939093526040808501929092526060840152608083019190915260a0909101905180910390f35b34156101b157600080fd5b6101b9610449565b60405190815260200160405180910390f35b34156101d657600080fd5b6100d1600435602435604435606435608435610450565b005b34156101fa57600080fd5b6100d173ffffffffffffffffffffffffffffffffffffffff6004351661052e565b005b600080548290811061022b57fe5b906000526020600020906005020160005b5080546001820154600283015460038401546004909401549294509092909185565b60008060008060006001600080549050108061027b575060005486115b1561028557600080fd5b600080548790811061029357fe5b906000526020600020906005020160005b50546000805491965090879081106102b857fe5b906000526020600020906005020160005b506001015493506000868154811015156102df57fe5b906000526020600020906005020160005b5060020154925060008681548110151561030657fe5b906000526020600020906005020160005b5060030154915060008681548110151561032d57fe5b906000526020600020906005020160005b506004015490505b91939590929450565b60008060008060006001600080549050101561036a57600080fd5b60008054600019810190811061037c57fe5b906000526020600020906005020160005b5054600080549196509060001981019081106103a557fe5b906000526020600020906005020160005b5060010154600080549195509060001981019081106103d157fe5b906000526020600020906005020160005b5060020154600080549194509060001981019081106103fd57fe5b906000526020600020906005020160005b50600301546000805491935090600019810190811061042957fe5b906000526020600020906005020160005b506004015490505b9091929394565b6000545b90565b6000805460018101610462838261054a565b916000526020600020906005020160005b60a060405190810160409081528982526020820189905281018790526060810186905260808101859052919050815181556020820151600182015560408201516002820155606082015181600301556080820151600490910155507f0d38bc05aaf0762132414e65476dc6d4d1999a2f6ccc9d63a26457d5d143ef8f9050858585858560405194855260208501939093526040808501929092526060840152608083019190915260a0909101905180910390a15b5050505050565b8073ffffffffffffffffffffffffffffffffffffffff16ff5b50565b81548183558181151161057657600502816005028360005260206000209182019101610576919061057c565b5b505050565b61044d91905b808211156105b15760008082556001820181905560028201819055600382018190556004820155600501610582565b5090565b905600a165627a7a7230582060d4a2567b73cad8acafe9f1127d1abaefaace2ad6c1d9327e6d176a396ee9f70029",
+  "networks": {
+    "3": {
+      "events": {
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0x0d38bc05aaf0762132414e65476dc6d4d1999a2f6ccc9d63a26457d5d143ef8f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newDb_name",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "newTable_name",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "newDb_key_name",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "newDb_key_value",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "newDb_op_type",
+              "type": "bytes32"
+            }
+          ],
+          "name": "AddRec",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x92dff5c94b5edafe24a38e0312fc4545bb46fa50",
+      "updated_at": 1505493431364
+    },
+    "87234": {
+      "events": {
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0x0d38bc05aaf0762132414e65476dc6d4d1999a2f6ccc9d63a26457d5d143ef8f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "newDb_name",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "newTable_name",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "newDb_key_name",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "newDb_key_value",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "newDb_op_type",
+              "type": "bytes32"
+            }
+          ],
+          "name": "AddRec",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x988bc86cdbe207f2c125f61b199beb584525e62f",
+      "updated_at": 1510137441381
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1512025901695
+}
